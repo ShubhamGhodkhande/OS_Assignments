@@ -1,0 +1,32 @@
+read -p "Enter range: " r
+	
+for ((i=1;i<=r;i++))
+do
+	sum=0
+	temp=$i
+	digit=0
+	while (($i>0))
+	do
+	temp=$((i/10))
+	digit=$((digit+1))
+	done
+	i=$temp
+	
+	while ((i>0))
+	do
+	n=1
+	rem=$((i%10))
+	for ((j=1;j<=digit;j++))
+	do
+		n=$((n*rem))
+	done
+		sum=$((sum+n))
+		i=$((i/10))
+	done
+		if ((sum==temp))
+		then
+		echo -n "$sum "
+		fi
+done
+	
+	

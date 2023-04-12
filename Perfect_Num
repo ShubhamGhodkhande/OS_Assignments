@@ -1,0 +1,18 @@
+read -p "Enter the number: " n
+temp=$n
+for ((i=2;i<=n;i++))
+do
+	fact=$((n/i))
+	if (($fact%i==0))
+	then
+		echo -n "$fact "
+		sum=$((sum+fact))
+	fi
+	n=$temp
+done	
+if (($sum!=$temp))
+then
+	echo "The number is not a perfect number."
+else
+	echo "The number is a perfect number"
+fi

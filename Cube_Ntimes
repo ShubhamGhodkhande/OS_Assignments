@@ -1,0 +1,6 @@
+echo "Enter an integer:- "
+read n
+for (( i=1; i<=n; i++ ))
+do
+	echo "Number is: $i and it's cube is: $(( i*i*i ))"
+done

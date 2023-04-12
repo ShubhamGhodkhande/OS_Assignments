@@ -1,0 +1,9 @@
+echo "Number between 100 and 200, divisible by 9:"
+for ((i=100;i<200;i++))
+do
+	if ((i%9==0))
+	then
+		echo -n "$i "
+	fi
+done
+	

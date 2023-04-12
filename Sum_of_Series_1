@@ -1,0 +1,19 @@
+read -p "Enter the value of x and range: " x r
+#temp=$x
+#sum=1
+#fact=1
+#s=-1
+result=1
+for ((i=1;i<r;i++))
+do
+	term=$(echo "scale=10; (-1)^$i * $x^(2*$i) / (2*$i)!" | bc -1)
+	result=$(echo "scale=10; $result + $term" | bc -1)
+	#temp=$(echo "scale=6; $temp * $x" | bc)
+	#fact=$(echo "scale=6; $fact * $i" | bc)
+	#s=$(echo "scale=6; $s * (-1)" | bc)
+	#v=$(echo "scale=6; ($temp / $fact) * $s" | bc)
+	#sum=$(echo "scale=6; $sum + $v" | bc)		
+done
+	echo "The sum = $result"
+	echo "Number of terms = $r"
+	echo "Value of x = $x"

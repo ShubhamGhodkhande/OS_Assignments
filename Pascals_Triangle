@@ -1,0 +1,20 @@
+read -p "Enter rows: " r
+for ((i=;i<r;i++))
+do
+	for ((j=1;j<=r-i;j++))
+	do
+		echo " "
+	done
+	for ((k=1;k<=i;k++))
+	do
+		if ((j==0 || i==0))
+		then
+			a=1
+		else
+			a=$((c*(i-j+1)/j))
+			echo "$a "
+		fi
+	done
+	echo " "
+done
+	

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Read input values
+echo "Input the Value of x: "
+read x
+echo "Input the number of terms: "
+read n
+
+# Initialize variables
+sum=1
+fact=1
+power=$x
+sign=-1
+
+# Calculate sum of series
+for (( i=1; i<n; i++ ))
+do
+  power=$(echo "scale=6; $power * $x" | bc)
+  fact=$(echo "scale=6; $fact * ((2*$i) * (2*$i-1))" | bc)
+  sign=$(echo "scale=6; $sign * (-1)" | bc)
+  term=$(echo "scale=6; ($power / $fact) * $sign" | bc)
+  sum=$(echo "scale=6; $sum + $term" | bc)
+done
+
+# Display results
+echo "the sum = $sum"
+echo "Number of terms = $n"
+echo "value of x = $x"

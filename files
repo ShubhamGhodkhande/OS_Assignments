@@ -1,0 +1,5 @@
+read -p "Enter the number of files:- " a
+for i in $(seq 1 $a)
+do
+	echo >> $i.txt
+done

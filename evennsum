@@ -1,0 +1,14 @@
+read -p "Enter number of terms" n
+sum=0
+echo -n "The even numbers are: "
+for (( i=1; i<=2*n; i++ ))
+do
+	if (( i%2 == 0 ))
+	then
+		echo -n "$i "
+		sum=$(( sum+i ))
+	fi
+	
+done
+echo " "
+echo "The sum of $n even numbers are = $sum"

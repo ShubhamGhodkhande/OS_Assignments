@@ -1,0 +1,26 @@
+read -p "Enter rows " num
+for ((i=1;i<=num;i++))
+do	
+	for ((j=1;j<=num-i;j++))
+	do
+		echo -n " "
+	done
+	for ((k=1;k<=2*i-1;k++))
+	do
+		echo -n "*"
+	done
+	echo " "
+done
+for ((l=num-1;l>=1;l--))
+	do
+	for ((n=1;n<=num-l;n++))
+	do
+		echo -n " "
+	done
+	for ((m=1;m<=2*l-1;m++))
+	do
+		echo -n "*"
+	done
+	echo " "
+done
+

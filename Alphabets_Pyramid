@@ -1,0 +1,18 @@
+read -p "Enter rows " r
+num=({A..Z})
+for ((i=0;i<=r;i++))
+do
+	for ((j=1;j<=r-i;j++))
+	do
+		echo -n " "
+	done
+	for ((k=0;j<=i;j++))
+	do
+		echo -n "${num[j]}"
+	done
+	for ((j=i-1;j>=1;j--))
+	do
+		echo -n "${num[j]}"
+	done
+	echo " "
+done

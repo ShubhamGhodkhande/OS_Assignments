@@ -1,0 +1,17 @@
+read -p "Enter rows " r
+for ((i=0;i<=r;i++))
+do
+	for ((j=1;j<=($r-$i);j++))
+	do
+		echo -n " "
+	done
+	for ((k=1;k<=i;k++))
+	do
+		echo -n "$k"
+	done
+	for ((l=i-1;l>=1;l--))
+	do
+		echo -n "$l"
+	done
+	echo " "
+done

@@ -1,0 +1,30 @@
+read -p "Enter a number: " a
+digit=0
+sum=0
+temp=$a
+while ((a>0))
+do
+	a=$((a/10))
+	digit=$((digit+1))
+done
+a=$temp
+echo "$digit"
+while ((a>0))
+do
+	n=1
+	rem=$((a%10))
+	for ((i=1;i<=digit;i++))
+	do
+		n=$((n*rem))
+	done
+		sum=$((sum+n))
+		a=$((a/10))
+done
+	echo $sum
+	if ((sum==temp))
+	then
+		echo "Is Armstrong"
+	else
+		echo "Not Armstrong"
+	fi	
+

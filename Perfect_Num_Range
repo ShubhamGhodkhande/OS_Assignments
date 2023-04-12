@@ -1,0 +1,18 @@
+read -p "Enter range from a to b: " a b
+for ((n=a;n<=b;n++))
+do
+	i=1
+	sum=0
+	while (($i<$n))
+	do
+	if (($n%$i==0))
+	then
+		sum=$((sum+i))
+	fi
+		i=$i+1
+	done
+	if (($sum==$n))
+	then
+	echo -n "$n "
+	fi
+done

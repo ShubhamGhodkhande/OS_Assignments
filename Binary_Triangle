@@ -1,0 +1,14 @@
+read -p "Enter rows: " r
+for ((i=1;i<=r;i++))
+do
+	for ((j=1;j<=i;j++))
+	do
+		if (((j+i)%2==0))
+		then
+			echo -n "1"
+		else
+			echo -n "0"
+		fi
+	done
+		echo " "
+done

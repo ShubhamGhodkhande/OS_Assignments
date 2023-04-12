@@ -1,0 +1,8 @@
+read -p "Enter the value of n: " n
+for ((i=1;i<=n;i++))
+do
+	sq=$((i*i))
+	echo -n "$sq "
+	sum=$((sum+sq))	
+done
+	echo "$sum "

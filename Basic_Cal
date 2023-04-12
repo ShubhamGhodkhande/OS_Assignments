@@ -1,0 +1,35 @@
+read -p "Enter two numbers:- " a b
+echo "Enter operation
+1.Addtion
+2.Subtraction
+3.Multiply
+4.Divide" 
+read -p ": " c
+
+case $c in
+	1)
+		sum=$(( $a + $b ))
+		echo "sum is: $sum"
+		#expr a + b
+	;;
+	2)
+		sub=$(( $a - $b ))
+		echo "sub is: $sub"	
+		#expr a - b
+	;;
+	3)
+		mul=$(( $a * $b ))
+		echo "mul is: $mul"
+		#expr a \* b
+	;;	
+	4)
+		div=$(( $a / $b ))
+		echo "Div is $div"
+		#expr a / b
+
+	;;
+	*)
+		echo "Invalid Choice"
+	;;
+esac
+
